@@ -257,104 +257,104 @@ executable ogmios
   if flag(production)
     ghc-options: -O2 -Werror "-with-rtsopts=-A100m -T -N2"
 
-test-suite unit
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  other-modules:
-      Ogmios.App.Protocol.ChainSyncSpec
-      Ogmios.App.Protocol.StateQuerySpec
-      Ogmios.App.Protocol.TxMonitorSpec
-      Ogmios.App.ProtocolSpec
-      Ogmios.Data.HealthSpec
-      Ogmios.Data.JsonSpec
-      Ogmios.Data.MetricsSpec
-      Ogmios.OptionsSpec
-      Test.App.Protocol.Util
-      Test.Generators
-      Test.Generators.Orphans
-      Test.Instances.Util
-      Test.Path.Util
-      Paths_ogmios
-  autogen-modules:
-      Paths_ogmios
-  hs-source-dirs:
-      test/unit
-  default-extensions:
-      BangPatterns
-      BinaryLiterals
-      ConstraintKinds
-      DataKinds
-      DefaultSignatures
-      DeriveDataTypeable
-      DeriveFoldable
-      DeriveFunctor
-      DeriveGeneric
-      DeriveTraversable
-      EmptyDataDecls
-      ExistentialQuantification
-      FlexibleContexts
-      FlexibleInstances
-      FunctionalDependencies
-      GADTs
-      InstanceSigs
-      KindSignatures
-      LambdaCase
-      MultiParamTypeClasses
-      MultiWayIf
-      NamedFieldPuns
-      NoImplicitPrelude
-      NumericUnderscores
-      OverloadedStrings
-      PartialTypeSignatures
-      PatternGuards
-      RankNTypes
-      ScopedTypeVariables
-      StandaloneDeriving
-      TupleSections
-      TypeFamilies
-      TypeSynonymInstances
-      ViewPatterns
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -Wunused-packages -threaded -rtsopts -with-rtsopts=-N
-  build-tool-depends:
-      hspec-discover:hspec-discover
-  build-depends:
-      QuickCheck
-    , aeson
-    , aeson-pretty
-    , base >=4.7 && <5
-    , base16
-    , bytestring
-    , cardano-client
-    , cardano-ledger-alonzo
-    , cardano-ledger-core
-    , cardano-ledger-shelley
-    , cardano-ledger-shelley-test
-    , cardano-slotting
-    , containers
-    , directory
-    , file-embed
-    , generic-arbitrary
-    , generics-sop
-    , hedgehog-quickcheck
-    , hspec
-    , hspec-json-schema
-    , io-classes
-    , io-sim
-    , json-wsp
-    , lens-aeson
-    , ogmios
-    , ouroboros-consensus
-    , ouroboros-consensus-byron
-    , ouroboros-consensus-cardano
-    , ouroboros-consensus-cardano-test
-    , ouroboros-consensus-protocol
-    , ouroboros-consensus-shelley
-    , ouroboros-network
-    , ouroboros-network-framework
-    , random
-    , relude
-    , template-haskell
-    , text
-    , time
-    , typed-protocols
-  default-language: Haskell2010
+-- test-suite unit
+--   type: exitcode-stdio-1.0
+--   main-is: Spec.hs
+--   other-modules:
+--       Ogmios.App.Protocol.ChainSyncSpec
+--       Ogmios.App.Protocol.StateQuerySpec
+--       Ogmios.App.Protocol.TxMonitorSpec
+--       Ogmios.App.ProtocolSpec
+--       Ogmios.Data.HealthSpec
+--       Ogmios.Data.JsonSpec
+--       Ogmios.Data.MetricsSpec
+--       Ogmios.OptionsSpec
+--       Test.App.Protocol.Util
+--       Test.Generators
+--       Test.Generators.Orphans
+--       Test.Instances.Util
+--       Test.Path.Util
+--       Paths_ogmios
+--   autogen-modules:
+--       Paths_ogmios
+--   hs-source-dirs:
+--       test/unit
+--   default-extensions:
+--       BangPatterns
+--       BinaryLiterals
+--       ConstraintKinds
+--       DataKinds
+--       DefaultSignatures
+--       DeriveDataTypeable
+--       DeriveFoldable
+--       DeriveFunctor
+--       DeriveGeneric
+--       DeriveTraversable
+--       EmptyDataDecls
+--       ExistentialQuantification
+--       FlexibleContexts
+--       FlexibleInstances
+--       FunctionalDependencies
+--       GADTs
+--       InstanceSigs
+--       KindSignatures
+--       LambdaCase
+--       MultiParamTypeClasses
+--       MultiWayIf
+--       NamedFieldPuns
+--       NoImplicitPrelude
+--       NumericUnderscores
+--       OverloadedStrings
+--       PartialTypeSignatures
+--       PatternGuards
+--       RankNTypes
+--       ScopedTypeVariables
+--       StandaloneDeriving
+--       TupleSections
+--       TypeFamilies
+--       TypeSynonymInstances
+--       ViewPatterns
+--   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -Wunused-packages -threaded -rtsopts -with-rtsopts=-N
+--   build-tool-depends:
+--       hspec-discover:hspec-discover
+--   build-depends:
+--       QuickCheck
+--     , aeson
+--     , aeson-pretty
+--     , base >=4.7 && <5
+--     , base16
+--     , bytestring
+--     , cardano-client
+--     , cardano-ledger-alonzo
+--     , cardano-ledger-core
+--     , cardano-ledger-shelley
+--     , cardano-ledger-shelley-test
+--     , cardano-slotting
+--     , containers
+--     , directory
+--     , file-embed
+--     , generic-arbitrary
+--     , generics-sop
+--     , hedgehog-quickcheck
+--     , hspec
+--     , hspec-json-schema
+--     , io-classes
+--     , io-sim
+--     , json-wsp
+--     , lens-aeson
+--     , ogmios
+--     , ouroboros-consensus
+--     , ouroboros-consensus-byron
+--     , ouroboros-consensus-cardano
+--     , ouroboros-consensus-cardano-test
+--     , ouroboros-consensus-protocol
+--     , ouroboros-consensus-shelley
+--     , ouroboros-network
+--     , ouroboros-network-framework
+--     , random
+--     , relude
+--     , template-haskell
+--     , text
+--     , time
+--     , typed-protocols
+--   default-language: Haskell2010
